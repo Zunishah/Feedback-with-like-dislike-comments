@@ -48,7 +48,7 @@ const Feedback = () => {
             errors.category = "Category is required";
         }
 
-        setErrors(errors); // Update errors state first
+        setErrors(errors); 
 
         if (Object.keys(errors).length === 0) {
             const resp = await axios({
@@ -58,10 +58,10 @@ const Feedback = () => {
                     ...formData
                 })
             })
-            // Add new feedback item to the list
+
             setFeedbackList([...feedbackList, formData]);
 
-            // Reset the form fields after successful submission
+
             setFormData({
                 title: '',
                 description: '',
